@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess Tracker</title>
+  </head>
+  <body class="spade">
+    <h1>Baby Guesser</h1>
+
+    <section class="inputs">
+      <div>
+        <label for="datetime-input">Date & Time</label>
+        <input type="datetime-local" id="datetime-input" />
+      </div>
+
+      <div>
+        <label for="pound-input">Pounds</label>
+        <input type="number" id="pound-input" min="4" max="12" step="1" />
+      </div>
+
+      <div>
+        <label for="ounce-input">Ounces</label>
+        <input type="number" id="ounce-input" min="0" max="15" step="1" />
+      </div>
+
+      <div>
+        <label for="inch-input">Inches </label>
+        <input type="number" id="inch-input" min="15" max="25" step="1" />
+      </div>
+    </section>
+
+    <section class="classes"></section>
+
+    <table>
+      <thead>
+        <tr>
+          <td>ID</td>
+          <td>Off By (ms)</td>
+          <td>Day</td>
+          <td>Hour</td>
+          <td>Half-Day</td>
+          <td>Minute</td>
+          <td>Pounds</td>
+          <td>Ounces</td>
+          <td>Inches</td>
+          <td>Individual</td>
+          <td>Class</td>
+          <td>Class Avg.</td>
+          <td>Total</td>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>
