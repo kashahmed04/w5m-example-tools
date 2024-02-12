@@ -113,7 +113,6 @@ document.querySelectorAll<HTMLInputElement>('input').forEach((input) => {
 })
 
 /*
-
 Section 1 wants:
 before 2/28 (good odds)
 later than 1:03 pm (even chances)
@@ -125,5 +124,51 @@ after 2/28 (bad odds)
 earlier than 1:03 pm (even chances)
 heavier than 7 lbs 13 oz (good odds)
 shorter than 19.9 inches (slightly unfavorable)
+*/
+
+/*
+TOOLING: 
+help improve developer quality of life (IDE that helps developers)
+VS code has a bunch of extnesions and we can set recommended extensions for the workspace 
+(everyone in repository should have this installed)
+work with VS codes extension.json (shows package names for the recommended extensions and there will be a popup to install
+the recommended packages)
+
+how to install tools**
+
+.EDITORCONFIG:
+standard configuration for our editor that makes our IDE behave similar to teammates IDE (tab size, line number, etc.)**
+we can have multiple config files in our repo that give overrides for folder or sublevel for folders (we set all files with the
+star and change the indent size so when we press tab then it moves 6 spaces instead of te regular tab size)
+we usually set the tab once then use that instead of resetting every time
+
+PRETTIER:
+code formatter that has its own opinions on formats and line breaks and how it should be and we can make it so when we save our file it 
+formats it for us and it cleans up our code reveiew**
+we configure it with .prettierrc file and we have 2 rules and we say no semi-colons and we use single quotes
+we can also change it and we can have semi-colons and single quotes to double quotes and when we save everything gets updated according to
+what we put in the prettier file
+in our settings.json we have to set the formatter to the prettier and we say editor.formatonsave is true so it changes when we save
+and the default formatter is prettier for our file** 
+we can also overrride it to make prettier to work on JS or TS files only but for now its used on everything**
+if we want to format the way we want to format it (matrix) and if we ran it through prettier then it forms a matrix into one
+long line and add the prettier-ignore comment above the thing we dont want prettier to edit**
+
+ESLINT WITH TS-ESLINT PLUGIN:
+we have certain aspects of code rather we use var or let or const and it will automatically run those in the editor while we 
+are writing and there is a command line tool to**
+.eslintrc.json file and we have the root configuration to true for the whole project to be edited and the extends is
+the recommended list of settings and TS rules and we use typescript parser that has optinos and pluggins for TS and we set our rule ovverides
+and the rules are on their website and they have a lot of rules and on the site there is a link that talks about
+the specific rule**
+
+no-var says dont use var and use let or const instead and for each rule it tells us what to not do for a file and it would give
+us a red line if we did not follow that rule**
+
+"no-var": [0]- dont do anything [1]- warning [2]- error (only choose one of the options though)**
+
+we can also run in command line by doing npm run lint and it gives us same error for using var**
+
+for the package.json we use "lint": eslint-src command in to use it**
 
 */
